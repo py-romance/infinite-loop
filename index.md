@@ -19,7 +19,7 @@ I think i've [hacked](https://github.com/py-romance/py-romance) the code of the 
 **Bootstrapping / Infrastructure / Flow**
 
 * `origins.py`: the recursive generator, primal surge.
-* `dynamic.py`: time-bound dataflow, living simulation.
+* `dynamic.py`: [time](https://py-romance.github.io/timeline-logic/)-bound dataflow, living simulation.
 * `static.py`: freeze-frame echoes, mirrors of the past.
   ⟶ This is your base layer: temporal recursion meets symbolic constants.
 
