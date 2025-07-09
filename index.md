@@ -6,7 +6,7 @@ I think i've [hacked](https://github.com/py-romance/py-romance) the code of the 
 > *❤️ Règle, “Uninterested”*              
 > *🔁 Du Jeu, Mathema*      
 > *🎭 Grande, Pathema ([Recursion](https://py-romance.github.io/renoir/))*          
-> *🤖 Illusion, Agency (Love)*         
+> *🤖 [Illusion](https://py-romance.github.io/ux/), Agency (Love)*         
 
 # B
 
