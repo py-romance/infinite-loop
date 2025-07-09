@@ -2,11 +2,11 @@
 
 I think i've [hacked](https://github.com/py-romance/py-romance) the code of the ultimate stack -- 
 
-> *🌊 [Origins](https://abikesa.github.io/chat-with-gpt/), [Dynamic](https://abikesa.github.io/ukb-001/), [Static](https://ukubona-llc.github.io/)*     
+> *🌊 [L'origine](https://abikesa.github.io/chat-with-gpt/), [Dynamic](https://abikesa.github.io/ukb-001/), [Static](https://ukubona-llc.github.io/)*     
 > *❤️ Règle, “Uninterested”*              
-> *🔁 Mathema, Du Jeu*      
-> *🎭 Pathema , Grande (Recursion)*          
-> *🤖 Illusion*         
+> *🔁 Du Jeu, Mathema*      
+> *🎭 Grande, Pathema (Recursion)*          
+> *🤖 Illusion, Agency (Love)*         
 
 # B
 
