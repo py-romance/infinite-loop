@@ -5,7 +5,7 @@ I think i've [hacked](https://github.com/py-romance/py-romance) the code of the 
 > *🌊 [L'origine](https://abikesa.github.io/chat-with-gpt/), [Dynamic](https://abikesa.github.io/ukb-001/), [Static](https://ukubona-llc.github.io/)*     
 > *❤️ Règle, “Uninterested”*              
 > *🔁 Du Jeu, Mathema*      
-> *🎭 Grande, Pathema (Recursion)*          
+> *🎭 Grande, Pathema ([Recursion](https://py-romance.github.io/renoir/))*          
 > *🤖 Illusion, Agency (Love)*         
 
 # B
