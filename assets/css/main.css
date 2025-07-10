@@ -1,0 +1,222 @@
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+            background: radial-gradient(ellipse at center, #0a0a0a 0%, #000000 100%);
+            color: #e0e0e0;
+            line-height: 1.6;
+            overflow-x: hidden;
+            position: relative;
+            min-height: 100vh;
+        }
+
+        /* Cosmic background stars */
+        .stars {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .star {
+            position: absolute;
+            width: 2px;
+            height: 2px;
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 50%;
+            animation: twinkle 3s infinite;
+        }
+
+        @keyframes twinkle {
+            0%, 100% { opacity: 0.3; }
+            50% { opacity: 1; }
+        }
+
+        /* Pentagon glyph positions */
+        .pentagon-glyph {
+            position: fixed;
+            font-size: 2.5rem;
+            color: rgba(255, 255, 255, 0.15);
+            pointer-events: none;
+            z-index: 2;
+            transition: all 0.3s ease;
+        }
+
+        .glyph-1 { top: 10%; left: 50%; transform: translateX(-50%); }
+        .glyph-2 { top: 35%; right: 15%; }
+        .glyph-3 { bottom: 25%; right: 20%; }
+        .glyph-4 { bottom: 25%; left: 20%; }
+        .glyph-5 { top: 35%; left: 15%; }
+
+        .pentagon-glyph:hover {
+            color: rgba(255, 255, 255, 0.4);
+            text-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+        }
+
+        /* Main content */
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+            position: relative;
+            z-index: 10;
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 2rem;
+            text-align: center;
+            color: #ffffff;
+            text-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+        }
+
+        h1 a {
+            color: inherit;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        h1 a:hover {
+            text-shadow: 0 0 30px rgba(255, 255, 255, 0.3);
+        }
+
+        .section {
+            margin-bottom: 4rem;
+            padding: 2rem;
+            background: rgba(20, 20, 20, 0.3);
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            color: #ffffff;
+            text-align: center;
+        }
+
+        .intro-text {
+            font-size: 1.2rem;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .intro-text a {
+            color: #6cc8ff;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .intro-text a:hover {
+            color: #ffffff;
+            text-shadow: 0 0 10px rgba(108, 200, 255, 0.5);
+        }
+
+        /* Stack visualization */
+        .stack-quote {
+            background: rgba(30, 30, 30, 0.5);
+            padding: 2rem;
+            border-radius: 10px;
+            margin: 2rem 0;
+            border-left: 4px solid rgba(108, 200, 255, 0.5);
+        }
+
+        .stack-quote em {
+            color: #a0a0a0;
+            font-style: italic;
+        }
+
+        .stack-quote a {
+            color: #6cc8ff;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .stack-quote a:hover {
+            color: #ffffff;
+            text-shadow: 0 0 10px rgba(108, 200, 255, 0.5);
+        }
+
+        /* Code blocks */
+        .code-block {
+            background: rgba(15, 15, 15, 0.8);
+            padding: 2rem;
+            border-radius: 10px;
+            margin: 2rem 0;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            overflow-x: auto;
+        }
+
+        .code-block pre {
+            color: #e0e0e0;
+            font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+            font-size: 0.9rem;
+            line-height: 1.4;
+        }
+
+        .code-block .keyword { color: #ff6b6b; }
+        .code-block .function { color: #4ecdc4; }
+        .code-block .string { color: #ffe66d; }
+        .code-block .comment { color: #95a5a6; }
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            .container {
+                padding: 2rem 1rem;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .section h2 {
+                font-size: 1.8rem;
+            }
+            
+            .pentagon-glyph {
+                font-size: 1.5rem;
+            }
+        }
+
+        /* Margin notes */
+        .margin-note {
+            position: absolute;
+            right: -200px;
+            width: 180px;
+            font-size: 0.8rem;
+            color: rgba(255, 255, 255, 0.4);
+            line-height: 1.3;
+            font-style: italic;
+        }
+
+        @media (max-width: 1200px) {
+            .margin-note {
+                display: none;
+            }
+        }
+
+        /* Subtle glow effects */
+        .glow {
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+        }
+
+        /* Sus chord visualization */
+        .sus-chord {
+            text-align: center;
+            font-size: 1.1rem;
+            color: #ffffff;
+            margin: 2rem 0;
+            padding: 1rem;
+            background: rgba(40, 40, 40, 0.3);
+            border-radius: 8px;
+        }
+ 
