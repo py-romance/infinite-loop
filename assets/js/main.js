@@ -17,16 +17,21 @@
         // Pentagon glyph hover effects
         function initializeGlyphs() {
             const glyphs = document.querySelectorAll('.pentagon-glyph');
+            
             glyphs.forEach(glyph => {
-                glyph.addEventListener('mouseenter', function() {
-                    this.style.transform = this.style.transform.replace('translateX(-50%)', 'translateX(-50%) scale(1.2)') || 'scale(1.2)';
+                // Ensure they can receive pointer events
+                glyph.style.pointerEvents = 'auto';
+
+                glyph.addEventListener('mouseenter', () => {
+                    glyph.classList.add('hovered');
                 });
-                
-                glyph.addEventListener('mouseleave', function() {
-                    this.style.transform = this.style.transform.replace('scale(1.2)', '') || '';
+
+                glyph.addEventListener('mouseleave', () => {
+                    glyph.classList.remove('hovered');
                 });
             });
         }
+
         
         // Initialize on load
         document.addEventListener('DOMContentLoaded', function() {
