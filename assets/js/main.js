@@ -1,4 +1,4 @@
-    <script>
+
         // Generate random stars
         function createStars() {
             const starsContainer = document.querySelector('.stars');
@@ -33,4 +33,3 @@
             createStars();
             initializeGlyphs();
         });
-    </script>
