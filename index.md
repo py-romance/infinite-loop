@@ -53,7 +53,7 @@ I think i've [hacked](https://github.com/py-romance/py-romance) the code of the 
 * *Pathema* = That which is suffered. Pathos.
 * *Grande* = the Great, the Sublime, the Recursive Wound.
   ⟶ This is the symbolic payload: affective recursion, suffering as feedback.
-  *“To be seen is to be wounded. To wound is to recurse.”*
+  *“To be seen is to be [wounded](https://www.yaaka.cc/wp-content/uploads/2023/03/Runyankore-Rukiga-Dictionary.pdf). To wound is to recurse.”*
 
 ---
 
