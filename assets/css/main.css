@@ -1,3 +1,4 @@
+
         * {
             margin: 0;
             padding: 0;
@@ -39,190 +40,195 @@
             50% { opacity: 1; }
         }
 
-        /* Pentagon glyph positions */
-        .pentagon-glyph {
+        /* Pentagon container */
+        .pentagon-container {
             position: fixed;
-           font-size: 3.5rem;
-            color: rgba(255, 255, 255, 0.15);
-            /* 🔥 REMOVE or COMMENT OUT THIS LINE */
-            /* pointer-events: none; */
-            z-index: 2;
-            transition: all 0.3s ease;
-}
-
-        .pentagon-glyph.hovered {
-        transform: translateX(-50%) scale(1.2);
-        color: rgba(255, 255, 255, 0.4);
-        text-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 300px;
+            height: 300px;
+            z-index: 10;
         }
 
+        /* Pentagon glyphs positioned in a pentagon shape */
+        .pentagon-glyph {
+            position: fixed;
+            font-size: 3.5rem;
+            color: rgba(255, 255, 255, 0.15);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            user-select: none;
+            z-index: 2;
+        }
 
+        .pentagon-glyph.hovered {
+            color: rgba(255, 255, 255, 0.4);
+            text-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+        }
+
+        .pentagon-glyph.active {
+            color: rgba(255, 255, 255, 0.8);
+            text-shadow: 0 0 30px rgba(255, 255, 255, 0.6);
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.7; }
+        }
+
+        /* Pentagon positioning */
         .glyph-1 { top: 10%; left: 50%; transform: translateX(-50%); }
         .glyph-2 { top: 35%; right: 15%; }
         .glyph-3 { bottom: 25%; right: 20%; }
         .glyph-4 { bottom: 25%; left: 20%; }
         .glyph-5 { top: 35%; left: 15%; }
 
-        .pentagon-glyph:hover {
-            color: rgba(255, 255, 255, 0.4);
-            text-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+        /* Content sections - hidden by default */
+        .content-section {
+            position: fixed;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.5s ease;
+            pointer-events: none;
+            font-size: 1.1rem;
+            line-height: 1.6;
+            max-width: 400px;
+            z-index: 5;
         }
 
-        /* Main content */
-        .container {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 4rem 2rem;
-            position: relative;
-            z-index: 10;
+        .content-section.active {
+            opacity: 1;
+            transform: translateY(0);
+            pointer-events: auto;
         }
 
-        h1 {
-            font-size: 3rem;
-            margin-bottom: 2rem;
-            text-align: center;
-            color: #ffffff;
-            text-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+        /* Content positioning from margins */
+        .content-a { top: 20px; left: 20px; }
+        .content-b { top: 20px; right: 20px; }
+        .content-c { bottom: 20px; right: 20px; }
+        .content-d { bottom: 20px; left: 20px; }
+        .content-e { top: 50%; left: 20px; transform: translateY(-50%); }
+
+        /* Content styling */
+        .content-section h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: #fff;
+            text-shadow: 0 0 10px rgba(255,255,255,0.5);
         }
 
-        h1 a {
-            color: inherit;
+        .content-section p {
+            margin-bottom: 1rem;
+            color: rgba(255,255,255,0.9);
+        }
+
+        .content-section a {
+            color: #64b5f6;
             text-decoration: none;
-            transition: all 0.3s ease;
+            transition: color 0.3s ease;
         }
 
-        h1 a:hover {
-            text-shadow: 0 0 30px rgba(255, 255, 255, 0.3);
+        .content-section a:hover {
+            color: #90caf9;
+            text-shadow: 0 0 5px rgba(144,202,249,0.5);
         }
 
-        .section {
-            margin-bottom: 4rem;
-            padding: 2rem;
-            background: rgba(20, 20, 20, 0.3);
-            border-radius: 15px;
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
-        .section h2 {
-            font-size: 2.5rem;
-            margin-bottom: 1.5rem;
-            color: #ffffff;
-            text-align: center;
-        }
-
-        .intro-text {
-            font-size: 1.2rem;
-            text-align: center;
-            margin-bottom: 2rem;
-        }
-
-        .intro-text a {
-            color: #6cc8ff;
-            text-decoration: none;
-            transition: all 0.3s ease;
-        }
-
-        .intro-text a:hover {
-            color: #ffffff;
-            text-shadow: 0 0 10px rgba(108, 200, 255, 0.5);
-        }
-
-        /* Stack visualization */
         .stack-quote {
-            background: rgba(30, 30, 30, 0.5);
-            padding: 2rem;
-            border-radius: 10px;
-            margin: 2rem 0;
-            border-left: 4px solid rgba(108, 200, 255, 0.5);
-        }
-
-        .stack-quote em {
-            color: #a0a0a0;
             font-style: italic;
+            color: rgba(255,255,255,0.8);
+            border-left: 3px solid rgba(255,255,255,0.3);
+            padding-left: 1rem;
+            margin: 1rem 0;
         }
 
-        .stack-quote a {
-            color: #6cc8ff;
-            text-decoration: none;
-            transition: all 0.3s ease;
+        .glow {
+            color: #fff;
+            text-shadow: 0 0 15px rgba(255,255,255,0.7);
         }
 
-        .stack-quote a:hover {
-            color: #ffffff;
-            text-shadow: 0 0 10px rgba(108, 200, 255, 0.5);
-        }
-
-        /* Code blocks */
         .code-block {
-            background: rgba(15, 15, 15, 0.8);
-            padding: 2rem;
-            border-radius: 10px;
-            margin: 2rem 0;
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            background: rgba(0,0,0,0.7);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 8px;
+            padding: 1rem;
+            margin: 1rem 0;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9rem;
             overflow-x: auto;
         }
 
-        .code-block pre {
-            color: #e0e0e0;
-            font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
-            font-size: 0.9rem;
-            line-height: 1.4;
+        .keyword { color: #ff6b6b; }
+        .function { color: #4ecdc4; }
+        .comment { color: #95a5a6; }
+
+        .sus-chord {
+            text-align: center;
+            font-style: italic;
+            color: rgba(255,255,255,0.7);
+            margin: 2rem 0;
+            font-size: 1.1rem;
         }
 
-        .code-block .keyword { color: #ff6b6b; }
-        .code-block .function { color: #4ecdc4; }
-        .code-block .string { color: #ffe66d; }
-        .code-block .comment { color: #95a5a6; }
+        /* Title in center when no glyph is active */
+        .title {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            transition: all 0.5s ease;
+            z-index: 1;
+            pointer-events: none;
+        }
+
+        .title.hidden {
+            opacity: 0;
+            transform: translate(-50%, -50%) scale(0.9);
+        }
+
+        .title h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: #fff;
+            text-shadow: 0 0 20px rgba(255,255,255,0.5);
+        }
+
+        .title h1 a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .title p {
+            color: rgba(255,255,255,0.7);
+            font-size: 1.1rem;
+        }
 
         /* Responsive design */
         @media (max-width: 768px) {
-            .container {
-                padding: 2rem 1rem;
-            }
-            
-            h1 {
-                font-size: 2rem;
-            }
-            
-            .section h2 {
-                font-size: 1.8rem;
+            .pentagon-container {
+                width: 250px;
+                height: 250px;
             }
             
             .pentagon-glyph {
-                font-size: 1.5rem;
+                font-size: 2.5rem;
+            }
+            
+            .content-section {
+                max-width: 300px;
+                font-size: 1rem;
+            }
+            
+            .content-a, .content-b, .content-c, .content-d, .content-e {
+                position: fixed;
+                top: 60px;
+                left: 50%;
+                transform: translateX(-50%);
+                right: auto;
+                bottom: auto;
+                text-align: center;
             }
         }
-
-        /* Margin notes */
-        .margin-note {
-            position: absolute;
-            right: -200px;
-            width: 180px;
-            font-size: 0.8rem;
-            color: rgba(255, 255, 255, 0.4);
-            line-height: 1.3;
-            font-style: italic;
-        }
-
-        @media (max-width: 1200px) {
-            .margin-note {
-                display: none;
-            }
-        }
-
-        /* Subtle glow effects */
-        .glow {
-            text-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
-        }
-
-        /* Sus chord visualization */
-        .sus-chord {
-            text-align: center;
-            font-size: 1.1rem;
-            color: #ffffff;
-            margin: 2rem 0;
-            padding: 1rem;
-            background: rgba(40, 40, 40, 0.3);
-            border-radius: 8px;
-        }
+ 
